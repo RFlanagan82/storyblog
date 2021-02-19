@@ -1,7 +1,8 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 const handlebars = require('handlebars');
-// const connection = require('./config/connection');
+const { sequelize } = require('sequelize');
+const connection = require('./config/connection');
 
 const app = express();
 
@@ -35,13 +36,10 @@ app.set("view engine", "handlebars");
 // var routes = require("./routes/api-routes")(app);
 
 
-app.listen(PORT, () => {
-  console.log(`App is running on http://localhost:${PORT}`);
-});
 
 //Event Listener on PORT - SYNCING OUR SEQUELIZE MODELS AND STARTING EXPRESS APP
-// db.sequelize.sync().then(function () {
-//   app.listen(PORT, () => {
-//     console.log(`Server is running on http://localhost:${PORT}`);
-//   });
-// });
+db.sequelize.sync().then(function () {
+  app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+  });
+});
