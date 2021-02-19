@@ -1,0 +1,31 @@
+{
+  "name": "storyblog app",
+  "version": "1.0.0",
+  "description": "A blog for those who are looking to have a place to put ideas for writing a book.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RFlanagan82/storyblog.git"
+  },
+  "keywords": [],
+  "author": "Ryan Flanagan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RFlanagan82/storyblog/issues"
+  },
+  "homepage": "https://github.com/RFlanagan82/storyblog#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.1",
+    "handlebars": "^4.7.7",
+    "mysql2": "^2.2.5",
+    "node": "^15.8.0",
+    "nodemon": "^2.0.7",
+    "sequelize": "^6.5.0"
+  }
+}
